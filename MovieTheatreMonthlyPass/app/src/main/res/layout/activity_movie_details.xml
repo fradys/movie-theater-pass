@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MovieDetailsActivity">
+
+    <include android:id="@+id/app_bar"
+        layout="@layout/app_bar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMovieDetailsTitle"
+        android:text="@string/txtMovieDetailsTitle"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="6dp"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollMovieDetails"
+        app:layout_constraintTop_toBottomOf="@+id/txtMovieDetailsTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linearMovieDetails"
+            android:orientation="vertical"
+
+            >
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="4"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:background="@drawable/darker_blank"
+                >
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="170dp"
+                    android:id="@+id/imgDetailsMoviePoster"
+                    android:src="@drawable/blank"
+                    android:layout_rowSpan="4"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="95dp"
+                    android:id="@+id/detailsMovieTitle"
+                    android:text="@string/noData"
+                    android:textSize="22sp"
+                    android:layout_rowSpan="2"
+                    android:textColor="@color/movie_title"
+                    />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/detailsMovieRuntime"
+                    android:text="@string/noData"
+                    android:textSize="24sp"
+                    />
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/detailsRatingBar"
+                    android:isIndicator="true"
+                    android:rating="1"
+                    android:stepSize="1"
+                    android:numStars="5"
+
+                    />
+
+            </GridLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="4dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtMovieDetailsTheaterHint"
+                android:textSize="18sp"
+                android:layout_marginTop="14dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                />
+
+            <Spinner
+                android:layout_width="390dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerMovieDetailsTheater"
+                android:layout_marginTop="2dp"
+                android:layout_gravity="center_horizontal"
+                android:tooltipText="@string/txtMovieDetailsTheaterHint"
+                />
+
+            <GridLayout
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:columnCount="2"
+                android:rowCount="1"
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center_horizontal"
+                >
+
+                <EditText
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtMovieDetailsDate"
+                    android:textSize="22sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="fill_horizontal"
+                    />
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btnMovieDetailsChooseDate"
+                    android:text="@string/txtMovieDetailsChooseDate"
+                    android:textSize="18dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_gravity="fill_horizontal"
+                    />
+
+            </GridLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtMovieDetailsSession"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
+                />
+
+            <GridView
+                android:layout_width="400dp"
+                android:layout_height="600dp"
+                android:id="@+id/gridButtonSession"
+                android:gravity="center"
+                android:columnWidth="150dp"
+                android:numColumns="auto_fit"
+                android:verticalSpacing="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="60dp"
+                android:stretchMode="spacingWidthUniform"
+                android:isScrollContainer="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@color/cardview_shadow_start_color"
+                android:visibility="gone"
+                />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+    
+    <Button
+        android:id="@+id/btnReservation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_blue_light"
+        android:text="@string/txtSaveReserve"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="100dp"
+        />
+
+
+</android.support.constraint.ConstraintLayout>

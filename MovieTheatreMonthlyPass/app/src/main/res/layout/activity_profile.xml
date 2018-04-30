@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <TextView
+        android:id="@+id/txtProfileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtProfileTitle"
+        android:textColor="@color/movie_title"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+    <ScrollView
+        android:id="@+id/scrollViewProfile"
+        android:layout_width="wrap_content"
+        android:layout_height="500dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtProfileTitle"
+
+        >
+
+        <LinearLayout
+            android:id="@+id/relativeLayoutProfileContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txtProfileSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="90dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="90dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/txtProfileSubtitle"
+                android:textSize="22sp" />
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:enabled="false"
+                android:hint="@string/txtEmail"
+                android:inputType="textEmailAddress"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/txtProfileName"
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginStart="16dp"
+                android:hint="@string/txtName"
+                android:inputType="text"
+                android:text="@string/txtName"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/txtBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="225dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="225dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/txtBirthday"
+                android:textSize="20sp" />
+
+            <DatePicker
+                android:id="@+id/dateProfileBirthday"
+                android:layout_width="350dp"
+                android:layout_height="170dp"
+                android:calendarViewShown="false"
+                android:datePickerMode="spinner"
+                android:theme="@android:style/Theme.Holo.Light" />
+
+
+            <TextView
+                android:id="@+id/txtProfileChangePass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="119dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="119dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/txtProfileChangePassword"
+                android:textColor="@color/movie_title"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/txtPassCurrent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="61dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="61dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/txtProfileCurrentPass"
+                android:inputType="textPassword"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/txtPassOne"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="61dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="61dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/txtNewPassword"
+                android:inputType="textPassword"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/txtPassTwo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="61dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="61dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:hint="@string/txtPassRepeat"
+                android:inputType="textPassword"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="250dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnSaveProfile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/holo_blue_light"
+        android:enabled="true"
+        android:text="@string/txtSave"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

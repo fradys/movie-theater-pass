@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary_background"
+    tools:context="net.androidbootcamp.movietheatremonthlypass.MoviesListActivity"
+
+    >
+
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar" />
+
+    <TextView
+        android:id="@+id/txtWelcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="casual"
+        android:gravity="center_horizontal"
+        android:text="@string/txtWelcomeMessage"
+        android:textColor="@color/lead_text"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_bar" />
+
+    <EditText
+        android:id="@+id/txtSearch"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:drawableRight="@android:drawable/ic_menu_search"
+        android:ems="10"
+        android:gravity="left"
+        android:hint="@string/txtSearchHint"
+        android:inputType="textPersonName"
+        android:textColor="@color/main_text"
+        android:textColorHint="@color/main_text"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtWelcomeMessage"
+        android:visibility="gone"
+        />
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/spaceSearch"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtWelcomeMessage"
+        />
+
+    <!--<TextView-->
+        <!--android:id="@+id/txtCategory"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="6dp"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:gravity="left"-->
+        <!--android:text="@string/txtCategory"-->
+        <!--android:textColor="@color/main_text"-->
+        <!--android:textSize="18sp"-->
+        <!--app:layout_constraintHorizontal_bias="0.054"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/txtSearch" />-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/spaceSearch">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            >
+
+            <!--New Releases-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtReleases"
+                android:text="@string/txtReleases"
+                android:textSize="26sp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/darker_text"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_height="match_parent"
+                android:layout_width="390dp"
+                android:layout_gravity="center"
+                android:id="@+id/recycler_releases"
+                android:background="@color/light_background"
+                android:elevation="4dp"
+                >
+            </android.support.v7.widget.RecyclerView>
+
+            <!--Action-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAction"
+                android:text="@string/txtAction"
+                android:textSize="26sp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/darker_text"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_height="match_parent"
+                android:layout_width="390dp"
+                android:layout_gravity="center"
+                android:id="@+id/recycler_action"
+                android:background="@color/light_background"
+                android:elevation="4dp"
+                >
+            </android.support.v7.widget.RecyclerView>
+
+            <!--Family-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtFamily"
+                android:text="@string/txtFamily"
+                android:textSize="26sp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/darker_text"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_height="match_parent"
+                android:layout_width="390dp"
+                android:layout_gravity="center"
+                android:id="@+id/recycler_family"
+                android:background="@color/light_background"
+                android:elevation="4dp"
+                >
+            </android.support.v7.widget.RecyclerView>
+
+            <!--On Display-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtAllMovies"
+                android:text="@string/txtAllMovies"
+                android:textSize="26sp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/darker_text"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_height="match_parent"
+                android:layout_width="390dp"
+                android:layout_gravity="center"
+                android:id="@+id/recycler_all"
+                android:background="@color/light_background"
+                android:elevation="4dp"
+                >
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

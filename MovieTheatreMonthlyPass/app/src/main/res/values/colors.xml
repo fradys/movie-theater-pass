@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#1427a3</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="Button_Background">#b9babcbe</color>
+    <color name="main_background">#414141</color>
+    <color name="popup_background">#e4d3ea</color>
+    <color name="toolbar_background">#45364B</color>
+    <color name="main_text">#414141</color>
+    <color name="lead_text">#E08E45</color>
+    <color name="movie_background">#979797</color>
+    <color name="movie_title">#07092b</color>
+    <color name="secondary_background">#FFEAE5EC</color>
+    <color name="darker_text">#181717</color>
+    <color name="light_background">#fdf8ff</color>
+    <color name="red_darker">#FF530600</color>
+    <color name="status_green">#FF0F5300</color>
+    <color name="status_blue">#FF00159B</color>
+    <color name="status_red">#cc2f23</color>
+    <color name="status_grey">#FF3D3D3D</color>
+    <color name="error_background">#fda099</color>
+</resources>

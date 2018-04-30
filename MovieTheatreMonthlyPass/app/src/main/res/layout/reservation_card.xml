@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/gridReservationCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@android:color/darker_gray"
+    android:columnCount="2"
+    android:padding="5dp"
+    android:rowCount="5">
+
+    <ImageView
+        android:id="@+id/imgReservationMoviePoster2"
+        android:layout_width="100dp"
+        android:layout_height="130dp"
+        android:layout_rowSpan="5"
+        android:src="@drawable/bpanther" />
+
+    <TextView
+        android:id="@+id/txtReservationMovieTitle2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:maxLines="1"
+        android:text="@string/txtMovieTitle"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/txtReservationMovieTheaterName2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:text="Cineplex Metropolis International Movie Theater"
+        android:textColor="@android:color/black"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtReservationDate2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="09/04/2018"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtReservationHour2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="11:00 AM - 12:30 PM"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtReservationStatus2"
+        android:layout_width="250sp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="CONFIRMED"
+        android:textColor="@color/status_green"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+</GridLayout>
+
